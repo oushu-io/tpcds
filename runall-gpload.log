@@ -1,0 +1,337 @@
+nohup: ignoring input
+
+===============================> Loading Data
+
+Running command "psql -d postgres -c 'drop database if exists tpcds'" ...done.
+
+Running command "createdb tpcds" ...done.
+
+Running command "psql -d tpcds -f dss.ddl" ...done.
+
+Loading and analyzing table: call_center ...NOTICE:  table "ext_call_center" does not exist, skipping
+Loading and analyzing table: catalog_page ...NOTICE:  table "ext_catalog_page" does not exist, skipping
+Loading and analyzing table: catalog_returns ...NOTICE:  table "ext_catalog_returns" does not exist, skipping
+Loading and analyzing table: catalog_sales ...NOTICE:  table "ext_catalog_sales" does not exist, skipping
+Loading and analyzing table: customer ...NOTICE:  table "ext_customer" does not exist, skipping
+Loading and analyzing table: customer_address ...NOTICE:  table "ext_customer_address" does not exist, skipping
+Loading and analyzing table: customer_demographics ...NOTICE:  table "ext_customer_demographics" does not exist, skipping
+Loading and analyzing table: date_dim ...NOTICE:  table "ext_date_dim" does not exist, skipping
+Loading and analyzing table: household_demographics ...NOTICE:  table "ext_household_demographics" does not exist, skipping
+Loading and analyzing table: income_band ...NOTICE:  table "ext_income_band" does not exist, skipping
+Loading and analyzing table: inventory ...NOTICE:  table "ext_inventory" does not exist, skipping
+Loading and analyzing table: item ...NOTICE:  table "ext_item" does not exist, skipping
+Loading and analyzing table: promotion ...NOTICE:  table "ext_promotion" does not exist, skipping
+Loading and analyzing table: reason ...NOTICE:  table "ext_reason" does not exist, skipping
+Loading and analyzing table: ship_mode ...NOTICE:  table "ext_ship_mode" does not exist, skipping
+Loading and analyzing table: store ...NOTICE:  table "ext_store" does not exist, skipping
+Loading and analyzing table: store_returns ...NOTICE:  table "ext_store_returns" does not exist, skipping
+Loading and analyzing table: store_sales ...NOTICE:  table "ext_store_sales" does not exist, skipping
+Loading and analyzing table: time_dim ...NOTICE:  table "ext_time_dim" does not exist, skipping
+Loading and analyzing table: warehouse ...NOTICE:  table "ext_warehouse" does not exist, skipping
+Loading and analyzing table: web_page ...NOTICE:  table "ext_web_page" does not exist, skipping
+Loading and analyzing table: web_returns ...NOTICE:  table "ext_web_returns" does not exist, skipping
+Loading and analyzing table: web_sales ...NOTICE:  table "ext_web_sales" does not exist, skipping
+Loading and analyzing table: web_site ...NOTICE:  table "ext_web_site" does not exist, skipping
+
+        relname         | pg_size_pretty 
+------------------------+----------------
+ store_sales            | 19 GB
+ catalog_sales          | 15 GB
+ web_sales              | 7543 MB
+ inventory              | 2192 MB
+ store_returns          | 1812 MB
+ catalog_returns        | 1213 MB
+ web_returns            | 557 MB
+ customer               | 146 MB
+ customer_address       | 38 MB
+ item                   | 30 MB
+ customer_demographics  | 18 MB
+ date_dim               | 5238 kB
+ time_dim               | 2526 kB
+ catalog_page           | 2448 kB
+ promotion              | 1305 kB
+ store                  | 1304 kB
+ web_page               | 1292 kB
+ household_demographics | 1277 kB
+ reason                 | 1220 kB
+ call_center            | 1149 kB
+ web_site               | 1077 kB
+ ship_mode              | 1029 kB
+ income_band            | 1026 kB
+ warehouse              | 1001 kB
+(24 rows)
+
+===============================> Running Queries
+===============================> the following is used for tpcds
+
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 15.649 ms
+INSERT 0 30
+Time: 586.642 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.393 ms
+INSERT 0 20400
+Time: 246.457 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.998 ms
+INSERT 0 14404374
+Time: 16423.077 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 18.921 ms
+INSERT 0 143997065
+Time: 244103.014 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 19.364 ms
+INSERT 0 2000000
+Time: 2651.010 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 12.435 ms
+INSERT 0 1000000
+Time: 934.902 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 21.329 ms
+INSERT 0 1920800
+Time: 771.623 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.741 ms
+INSERT 0 73049
+Time: 650.849 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.711 ms
+INSERT 0 7200
+Time: 168.889 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 12.690 ms
+INSERT 0 20
+Time: 131.909 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.938 ms
+INSERT 0 399330000
+Time: 43997.583 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 15.023 ms
+INSERT 0 204000
+Time: 999.597 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 15.245 ms
+INSERT 0 1000
+Time: 1354.011 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.322 ms
+INSERT 0 55
+Time: 123.315 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 15.441 ms
+INSERT 0 20
+Time: 1147.996 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.449 ms
+INSERT 0 402
+Time: 521.280 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 16.094 ms
+INSERT 0 28795080
+Time: 24421.547 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.387 ms
+INSERT 0 287997024
+Time: 346750.088 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 18.837 ms
+INSERT 0 86400
+Time: 287.515 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.736 ms
+INSERT 0 15
+Time: 255.489 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.354 ms
+INSERT 0 2040
+Time: 315.823 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 14.643 ms
+INSERT 0 7197670
+Time: 6353.809 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 15.736 ms
+INSERT 0 72001237
+Time: 115389.984 ms
+ANALYZE
+CREATE EXTERNAL TABLE
+Timing is on.
+SET
+Time: 13.596 ms
+INSERT 0 24
+Time: 1371.044 ms
+ANALYZE
+total insert time : 929993 ms
+===============================>TPCHQuery stream 0
+TPCDSQuery 96: 4907 ms
+TPCDSQuery 7: 8086 ms
+TPCDSQuery 75: 18031 ms
+TPCDSQuery 44: 5843 ms
+TPCDSQuery 39: 20565 ms
+TPCDSQuery 80: 10778 ms
+TPCDSQuery 32: 5096 ms
+TPCDSQuery 19: 6080 ms
+TPCDSQuery 25: 13726 ms
+TPCDSQuery 78: 47467 ms
+TPCDSQuery 86: 3513 ms
+TPCDSQuery 1: 2149 ms
+TPCDSQuery 91: 1052 ms
+TPCDSQuery 21: 5554 ms
+TPCDSQuery 43: 6863 ms
+TPCDSQuery 27: 8794 ms
+TPCDSQuery 94: 7886 ms
+TPCDSQuery 45: 2449 ms
+TPCDSQuery 58: 5899 ms
+TPCDSQuery 64: 24126 ms
+TPCDSQuery 36: 9925 ms
+TPCDSQuery 33: 8363 ms
+TPCDSQuery 46: 752 ms
+TPCDSQuery 62: 3926 ms
+TPCDSQuery 16: 16238 ms
+TPCDSQuery 10: 5827 ms
+TPCDSQuery 63: 5543 ms
+TPCDSQuery 69: 6262 ms
+TPCDSQuery 60: 7435 ms
+TPCDSQuery 59: 98336 ms
+TPCDSQuery 37: 8388 ms
+TPCDSQuery 98: 5623 ms
+TPCDSQuery 85: 7052 ms
+TPCDSQuery 70: 14801 ms
+TPCDSQuery 67: 237349 ms
+TPCDSQuery 28: 10392 ms
+TPCDSQuery 81: 1893 ms
+TPCDSQuery 97: 16672 ms
+TPCDSQuery 66: 5032 ms
+TPCDSQuery 90: 2747 ms
+TPCDSQuery 17: 13879 ms
+TPCDSQuery 47: 13201 ms
+TPCDSQuery 95: 46414 ms
+TPCDSQuery 92: 3695 ms
+TPCDSQuery 3: 4991 ms
+TPCDSQuery 51: 20729 ms
+TPCDSQuery 35: 8147 ms
+TPCDSQuery 49: 9745 ms
+TPCDSQuery 9: 16047 ms
+TPCDSQuery 31: 8105 ms
+TPCDSQuery 11: 29346 ms
+TPCDSQuery 93: 6229 ms
+TPCDSQuery 29: 11548 ms
+TPCDSQuery 38: 22223 ms
+TPCDSQuery 22: 16864 ms
+TPCDSQuery 89: 5793 ms
+TPCDSQuery 15: 2974 ms
+TPCDSQuery 6: 4766 ms
+TPCDSQuery 52: 4612 ms
+TPCDSQuery 50: 7617 ms
+TPCDSQuery 42: 4752 ms
+TPCDSQuery 41: 211 ms
+TPCDSQuery 8: 5002 ms
+TPCDSQuery 12: 1924 ms
+TPCDSQuery 20: 3030 ms
+TPCDSQuery 88: 14695 ms
+TPCDSQuery 82: 8170 ms
+TPCDSQuery 23: 132765 ms
+TPCDSQuery 14: 51789 ms
+TPCDSQuery 57: 9343 ms
+TPCDSQuery 65: 23165 ms
+TPCDSQuery 71: 10008 ms
+TPCDSQuery 34: 6661 ms
+TPCDSQuery 48: 12454 ms
+TPCDSQuery 30: 1380 ms
+TPCDSQuery 74: 16277 ms
+TPCDSQuery 87: 23089 ms
+TPCDSQuery 77: 7235 ms
+TPCDSQuery 73: 5943 ms
+TPCDSQuery 84: 1426 ms
+TPCDSQuery 54: 9472 ms
+TPCDSQuery 55: 5022 ms
+TPCDSQuery 56: 7587 ms
+TPCDSQuery 2: 17243 ms
+TPCDSQuery 26: 4841 ms
+TPCDSQuery 40: 4128 ms
+TPCDSQuery 72: 108585 ms
+TPCDSQuery 53: 5844 ms
+TPCDSQuery 79: 8898 ms
+TPCDSQuery 18: 6275 ms
+TPCDSQuery 13: 13772 ms
+TPCDSQuery 24: 14681 ms
+TPCDSQuery 4: 62338 ms
+TPCDSQuery 99: 7070 ms
+TPCDSQuery 68: 770 ms
+TPCDSQuery 83: 1765 ms
+TPCDSQuery 61: 1146 ms
+TPCDSQuery 5: 10472 ms
+TPCDSQuery 76: 4962 ms
+SF is: 100
+total time : 1573799 ms

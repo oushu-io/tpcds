@@ -1,0 +1,96 @@
+#!/bin/bash
+
+DATASIZE=`grep DATASIZE tpcds.config|awk -F '=' '{print $2}'`
+QUERY_STREAMS=`grep QUERY_STREAMS tpcds.config|awk -F '=' '{print $2}'`
+VSEG_RESOURCE_QUOTA=`grep VSEG_RESOURCE_QUOTA tpch.config|awk -F '=' '{print $2}'`
+
+if [ ${QUERY_STREAMS} -gt 20 ]; then
+        echo "Usage:$0 the QUERY_STREAMS exceeding the maximum limit of 20"
+        exit
+fi
+
+time=""
+CURDIR=`pwd`
+rm -rf ${CURDIR}/logs/sem*
+rm -rf ${CURDIR}/logs/queries*
+
+getTiming() 
+{
+
+    start=$1
+    end=$2
+   
+    start_s=$(echo $start | cut -d '.' -f 1)
+    start_ns=$(echo $start | cut -d '.' -f 2)
+    end_s=$(echo $end | cut -d '.' -f 1)
+    end_ns=$(echo $end | cut -d '.' -f 2)
+
+    time=$(( ( 10#$end_s - 10#$start_s ) * 1000 + ( 10#$end_ns / 1000000 - 10#$start_ns / 1000000 ) ))
+
+}
+
+start_query()
+{
+
+	while read i
+	do
+
+		echo ================================================================= >> logs/queries${1}.out
+		echo ======================= Query Number ${i} ======================= >> logs/queries${1}.out
+		echo ================================================================= >> logs/queries${1}.out
+
+		start=$(date +%s.%N)
+
+		psql -d tpcds -f ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql >> logs/queries${1}.out 2>&1
+
+		end=$(date +%s.%N)
+
+		getTiming $start $end
+
+		echo "TPCDSQuery ${i}: ${time} ms"  >> logs/sem${1}.out
+
+	done < ${CURDIR}/WORK/stream${1}.sem
+
+}
+
+psql -d postgres -Atc "ALTER RESOURCE QUEUE pg_default with(vseg_resource_quota='mem:${VSEG_RESOURCE_QUOTA}');"
+if [ $QUERY_STREAMS -gt 1 ];then 
+
+	startall=$(date +%s.%N)
+	for ((c = 1; c <= $QUERY_STREAMS; ++c)); do
+		echo > logs/queries${c}.out
+		echo "===============================>TPCDSQuery stream ${c}" > logs/sem${c}.out
+		start_query ${c} &
+	done
+
+	wait
+
+	for ((c = 1; c <= $QUERY_STREAMS; ++c)); do
+                cat logs/sem${c}.out >> logs/queryresult4tpcdsform.out
+        done
+
+	endall=$(date +%s.%N)
+
+	getTiming $startall $endall
+
+	echo "SF is: "$DATASIZE >> logs/queryresult4tpcdsform.out
+
+	echo "total time : ${time} ms" >> logs/queryresult4tpcdsform.out
+
+else
+
+	startall=$(date +%s.%N)
+	echo > logs/queries0.out
+	echo "===============================>TPCDSQuery stream 0" > logs/sem0.out
+	start_query 0
+	cat logs/sem0.out >> logs/queryresult4tpcdsform.out
+	endall=$(date +%s.%N)
+
+	getTiming $startall $endall
+
+	echo "SF is: "$DATASIZE >> logs/queryresult4tpcdsform.out
+
+	echo "total time : ${time} ms" >> logs/queryresult4tpcdsform.out
+
+fi
+psql -d postgres -Atc "ALTER RESOURCE QUEUE pg_default with(vseg_resource_quota='mem:256mb');"

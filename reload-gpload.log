@@ -1,0 +1,133 @@
+nohup: ignoring input
+
+Running command "psql -d postgres -c 'drop database if exists tpcds'" ...done.
+
+Running command "createdb tpcds" ...done.
+
+Running command "psql -d tpcds -f dss.ddl" ...done.
+
+Loading and analyzing table: call_center ...NOTICE:  table "ext_call_center" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 30
+ANALYZE
+Loading and analyzing table: catalog_page ...NOTICE:  table "ext_catalog_page" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 20400
+ANALYZE
+Loading and analyzing table: catalog_returns ...NOTICE:  table "ext_catalog_returns" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 14404374
+ANALYZE
+Loading and analyzing table: catalog_sales ...NOTICE:  table "ext_catalog_sales" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 143997065
+ANALYZE
+Loading and analyzing table: customer ...NOTICE:  table "ext_customer" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 2000000
+ANALYZE
+Loading and analyzing table: customer_address ...NOTICE:  table "ext_customer_address" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 1000000
+ANALYZE
+Loading and analyzing table: customer_demographics ...NOTICE:  table "ext_customer_demographics" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 1920800
+ANALYZE
+Loading and analyzing table: date_dim ...NOTICE:  table "ext_date_dim" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 73049
+ANALYZE
+Loading and analyzing table: household_demographics ...NOTICE:  table "ext_household_demographics" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 7200
+ANALYZE
+Loading and analyzing table: income_band ...NOTICE:  table "ext_income_band" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 20
+ANALYZE
+Loading and analyzing table: inventory ...NOTICE:  table "ext_inventory" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 399330000
+ANALYZE
+Loading and analyzing table: item ...NOTICE:  table "ext_item" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 204000
+ANALYZE
+Loading and analyzing table: promotion ...NOTICE:  table "ext_promotion" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 1000
+ANALYZE
+Loading and analyzing table: reason ...NOTICE:  table "ext_reason" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 55
+ANALYZE
+Loading and analyzing table: ship_mode ...NOTICE:  table "ext_ship_mode" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 20
+ANALYZE
+Loading and analyzing table: store ...NOTICE:  table "ext_store" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 402
+ANALYZE
+Loading and analyzing table: store_returns ...NOTICE:  table "ext_store_returns" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 28795080
+ANALYZE
+Loading and analyzing table: store_sales ...NOTICE:  table "ext_store_sales" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 287997024
+ANALYZE
+Loading and analyzing table: time_dim ...NOTICE:  table "ext_time_dim" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 86400
+ANALYZE
+Loading and analyzing table: warehouse ...NOTICE:  table "ext_warehouse" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 15
+ANALYZE
+Loading and analyzing table: web_page ...NOTICE:  table "ext_web_page" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 2040
+ANALYZE
+Loading and analyzing table: web_returns ...NOTICE:  table "ext_web_returns" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 7197670
+ANALYZE
+Loading and analyzing table: web_sales ...NOTICE:  table "ext_web_sales" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 72001237
+ANALYZE
+Loading and analyzing table: web_site ...NOTICE:  table "ext_web_site" does not exist, skipping
+CREATE EXTERNAL TABLE
+INSERT 0 24
+ANALYZE
+
+        relname         | pg_size_pretty 
+------------------------+----------------
+ store_sales            | 19 GB
+ catalog_sales          | 15 GB
+ web_sales              | 7542 MB
+ inventory              | 2191 MB
+ store_returns          | 1812 MB
+ catalog_returns        | 1212 MB
+ web_returns            | 557 MB
+ customer               | 146 MB
+ customer_address       | 37 MB
+ item                   | 30 MB
+ customer_demographics  | 18 MB
+ date_dim               | 5236 kB
+ time_dim               | 2523 kB
+ catalog_page           | 2446 kB
+ promotion              | 1305 kB
+ store                  | 1304 kB
+ web_page               | 1292 kB
+ household_demographics | 1277 kB
+ reason                 | 1220 kB
+ call_center            | 1149 kB
+ web_site               | 1077 kB
+ ship_mode              | 1029 kB
+ income_band            | 1026 kB
+ warehouse              | 1001 kB
+(24 rows)
+

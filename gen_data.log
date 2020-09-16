@@ -1,0 +1,205 @@
+nohup: ignoring input
+ssh c7 source ${BASH_PROFILE};/usr/local/hawq/./bin/parallel_dsdgen 100 48 /data2/hawq/data/tpcds/100  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+ps -ef | grep '\-terminate N \-force Y'| grep -v grep | awk '{print $2}' | xargs kill -9 >/dev/null 2>&1
+rm -rf /data2/hawq/data/tpcds/100; mkdir -p /data2/hawq/data/tpcds/100
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+ssh c8 source ${BASH_PROFILE};/usr/local/hawq/./bin/parallel_dsdgen 100 48 /data2/hawq/data/tpcds/100  17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+Waiting child process(pid:15321 1/16) done ...
+ps -ef | grep '\-terminate N \-force Y'| grep -v grep | awk '{print $2}' | xargs kill -9 >/dev/null 2>&1
+rm -rf /data2/hawq/data/tpcds/100; mkdir -p /data2/hawq/data/tpcds/100
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+ssh c9 source ${BASH_PROFILE};/usr/local/hawq/./bin/parallel_dsdgen 100 48 /data2/hawq/data/tpcds/100  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+Waiting child process(pid:12554 1/16) done ...
+ps -ef | grep '\-terminate N \-force Y'| grep -v grep | awk '{print $2}' | xargs kill -9 >/dev/null 2>&1
+rm -rf /data2/hawq/data/tpcds/100; mkdir -p /data2/hawq/data/tpcds/100
+dsdgen Population Generator (Version 2.10.0)
+dsdgen Population Generator (Version 2.10.0)
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Warning: Selected scale factor is NOT valid for result publication
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Warning: Selected scale factor is NOT valid for result publication
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+dsdgen Population Generator (Version 2.10.0)
+Copyright Transaction Processing Performance Council (TPC) 2001 - 2018
+Warning: Selected scale factor is NOT valid for result publication
+Warning: Selected scale factor is NOT valid for result publication
+Waiting child process(pid:10953 1/16) done ...
+Waiting child process(pid:15320 2/16) done ...
+Waiting child process(pid:15319 3/16) done ...
+Waiting child process(pid:15318 4/16) done ...
+Waiting child process(pid:15317 5/16) done ...
+Waiting child process(pid:15316 6/16) done ...
+Waiting child process(pid:15315 7/16) done ...
+Waiting child process(pid:15314 8/16) done ...
+Waiting child process(pid:15313 9/16) done ...
+Waiting child process(pid:15312 10/16) done ...
+Waiting child process(pid:15311 11/16) done ...
+Waiting child process(pid:10952 2/16) done ...
+Waiting child process(pid:15310 12/16) done ...
+Waiting child process(pid:15309 13/16) done ...
+Waiting child process(pid:15308 14/16) done ...
+Waiting child process(pid:15307 15/16) done ...
+Waiting child process(pid:15306 16/16) done ...
+Generate data SUCCESSED
+Waiting child process(pid:10951 3/16) done ...
+Waiting child process(pid:10950 4/16) done ...
+Waiting child process(pid:10949 5/16) done ...
+Waiting child process(pid:10948 6/16) done ...
+Waiting child process(pid:10947 7/16) done ...
+Waiting child process(pid:10946 8/16) done ...
+Waiting child process(pid:10945 9/16) done ...
+Waiting child process(pid:10944 10/16) done ...
+Waiting child process(pid:10943 11/16) done ...
+Waiting child process(pid:10942 12/16) done ...
+Waiting child process(pid:10941 13/16) done ...
+Waiting child process(pid:10940 14/16) done ...
+Waiting child process(pid:10939 15/16) done ...
+Waiting child process(pid:10938 16/16) done ...
+Generate data SUCCESSED
+Waiting child process(pid:12553 2/16) done ...
+Waiting child process(pid:12552 3/16) done ...
+Waiting child process(pid:12551 4/16) done ...
+Waiting child process(pid:12550 5/16) done ...
+Waiting child process(pid:12549 6/16) done ...
+Waiting child process(pid:12548 7/16) done ...
+Waiting child process(pid:12547 8/16) done ...
+Waiting child process(pid:12546 9/16) done ...
+Waiting child process(pid:12545 10/16) done ...
+Waiting child process(pid:12544 11/16) done ...
+Waiting child process(pid:12543 12/16) done ...
+Waiting child process(pid:12542 13/16) done ...
+Waiting child process(pid:12541 14/16) done ...
+Waiting child process(pid:12540 15/16) done ...
+Waiting child process(pid:12539 16/16) done ...
+Generate data SUCCESSED
