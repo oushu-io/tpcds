@@ -2,7 +2,7 @@
 
 DATASIZE=`grep DATASIZE tpcds.config|awk -F '=' '{print $2}'`
 QUERY_STREAMS=`grep QUERY_STREAMS tpcds.config|awk -F '=' '{print $2}'`
-VSEG_RESOURCE_QUOTA=`grep VSEG_RESOURCE_QUOTA tpch.config|awk -F '=' '{print $2}'`
+VSEG_RESOURCE_QUOTA=`grep VSEG_RESOURCE_QUOTA tpcds.config|awk -F '=' '{print $2}'`
 
 if [ ${QUERY_STREAMS} -gt 20 ]; then
         echo "Usage:$0 the QUERY_STREAMS exceeding the maximum limit of 20"

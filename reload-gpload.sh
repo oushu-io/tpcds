@@ -106,7 +106,7 @@ d_ext_create="drop  EXTERNAL TABLE if exists ext_${TBNAME};             \
 psql -v ON_ERROR_STOP=1 -h $GP_DBHOST -c "$d_ext_create"
 errexit99 $?
 
-echo "\timing 
+echo "\timing on 
 set gp_autostats_mode='NONE';
 insert into ${TBNAME} select * from ext_${TBNAME};"| psql -v ON_ERROR_STOP=1 -h $GP_DBHOST -At
 errexit99 $?

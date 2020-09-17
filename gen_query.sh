@@ -38,12 +38,12 @@ gen_query() {
 		   [[ ${i} -eq 76 ]] || [[ ${i} -eq 78 ]] ||
 		   [[ ${i} -eq 81 ]] || [[ ${i} -eq 83 ]] ||
 		   [[ ${i} -eq 95 ]] || [[ ${i} -eq 99 ]]; then
-			echo "\timing" > ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
+			echo "\timing on" > ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			echo "set optimizer=on;" >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			echo "set new_executor=auto;" >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			sed -n "/query${i}.tpl/,/query${i}.tpl/p" ${CURDIR}/WORK/${DATASIZE}/query_0.sql >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 		else
-			echo "\timing" > ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
+			echo "\timing on" > ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			echo "set new_executor=auto;" >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
                         sed -n "/query${i}.tpl/,/query${i}.tpl/p" ${CURDIR}/WORK/${DATASIZE}/query_0.sql >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 		fi
