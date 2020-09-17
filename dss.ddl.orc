@@ -5,7 +5,7 @@ create table dbgen_version
     dv_create_time            time                          ,
     dv_cmdline_args           varchar(200)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 ;
 
 
@@ -25,7 +25,7 @@ create table customer_address
     ca_gmt_offset             decimal(5,2)                  ,
     ca_location_type          char(20)                      
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (ca_address_sk)
 ;
 
@@ -41,7 +41,7 @@ create table customer_demographics
     cd_dep_employed_count     integer                       ,
     cd_dep_college_count      integer                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (cd_demo_sk)
 ;
 
@@ -76,7 +76,7 @@ create table date_dim
     d_current_quarter         char(1)                       ,
     d_current_year            char(1)                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (d_date_sk)
 ;
 
@@ -97,7 +97,7 @@ create table warehouse
     w_country                 varchar(20)                   ,
     w_gmt_offset              decimal(5,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (w_warehouse_sk)
 ;
 
@@ -110,7 +110,7 @@ create table ship_mode
     sm_carrier                char(20)                      ,
     sm_contract               char(20)                      
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (sm_ship_mode_sk)
 ;
 
@@ -127,7 +127,7 @@ create table time_dim
     t_sub_shift               char(20)                      ,
     t_meal_time               char(20)                      
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (t_time_sk)
 ;
 
@@ -137,7 +137,7 @@ create table reason
     r_reason_id               char(16)              ,
     r_reason_desc             char(100)                     
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (r_reason_sk)
 ;
 
@@ -147,7 +147,7 @@ create table income_band
     ib_lower_bound            integer                       ,
     ib_upper_bound            integer                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (ib_income_band_sk)
 ;
 
@@ -176,7 +176,7 @@ create table item
     i_manager_id              integer                       ,
     i_product_name            char(50)                      
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (i_item_sk)
 ;
 
@@ -212,7 +212,7 @@ create table store
     s_gmt_offset              decimal(5,2)                  ,
     s_tax_precentage          decimal(5,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (s_store_sk)
 ;
 
@@ -250,7 +250,7 @@ create table call_center
     cc_gmt_offset             decimal(5,2)                  ,
     cc_tax_percentage         decimal(5,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (cc_call_center_sk)
 ;
 
@@ -275,7 +275,7 @@ create table customer
     c_email_address           char(50)                      ,
     c_last_review_date        char(10)                      
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (c_customer_sk)
 ;
 
@@ -308,7 +308,7 @@ create table web_site
     web_gmt_offset            decimal(5,2)                  ,
     web_tax_percentage        decimal(5,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (web_site_sk)
 ;
 
@@ -335,7 +335,7 @@ create table store_returns
     sr_store_credit           decimal(7,2)                  ,
     sr_net_loss               decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (sr_item_sk,sr_ticket_number)
 ;
 
@@ -347,7 +347,7 @@ create table household_demographics
     hd_dep_count              integer                       ,
     hd_vehicle_count          integer                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (hd_demo_sk)
 ;
 
@@ -368,7 +368,7 @@ create table web_page
     wp_image_count            integer                       ,
     wp_max_ad_count           integer                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (wp_web_page_sk)
 ;
 
@@ -394,7 +394,7 @@ create table promotion
     p_purpose                 char(15)                      ,
     p_discount_active         char(1)                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (p_promo_sk)
 ;
 
@@ -410,7 +410,7 @@ create table catalog_page
     cp_description            varchar(100)                  ,
     cp_type                   varchar(100)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (cp_catalog_page_sk)
 ;
 
@@ -421,7 +421,7 @@ create table inventory
     inv_warehouse_sk          integer               ,
     inv_quantity_on_hand      integer                       
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (inv_date_sk,inv_item_sk,inv_warehouse_sk)
 ;
 
@@ -455,7 +455,7 @@ create table catalog_returns
     cr_store_credit           decimal(7,2)                  ,
     cr_net_loss               decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (cr_item_sk,cr_order_number)
 ;
 
@@ -486,7 +486,7 @@ create table web_returns
     wr_account_credit         decimal(7,2)                  ,
     wr_net_loss               decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (wr_order_number,wr_item_sk)
 ;
 
@@ -527,7 +527,7 @@ create table web_sales
     ws_net_paid_inc_ship_tax  decimal(7,2)                  ,
     ws_net_profit             decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (ws_item_sk,ws_order_number)
 ;
 
@@ -568,7 +568,7 @@ create table catalog_sales
     cs_net_paid_inc_ship_tax  decimal(7,2)                  ,
     cs_net_profit             decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (cs_item_sk,cs_order_number)
 ;
 
@@ -598,7 +598,7 @@ create table store_sales
     ss_net_paid_inc_tax       decimal(7,2)                  ,
     ss_net_profit             decimal(7,2)                  
 )
-FORMAT 'orc' (compresstype 'lz4' dicthreshold '0.8' bucketnum :bkn)
+with (APPENDONLY=true,ORIENTATION=orc,COMPRESSTYPE=lz4,dicthreshold=0.8,bucketnum=:bkn)
 distributed by (ss_item_sk,ss_ticket_number)
 ;
 

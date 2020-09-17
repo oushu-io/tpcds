@@ -1,0 +1,11 @@
+select * from (select ss_sold_date_sk, count(*) from store_sales group by ss_sold_date_sk) aa limit 100;
+select * from (select ss_sold_time_sk, count(*) from store_sales group by ss_sold_time_sk) aa limit 100;
+select * from (select ss_item_sk, count(*) from store_sales group by ss_item_sk) aa limit 100;
+select * from (select ss_customer_sk, count(*) from store_sales group by ss_customer_sk) aa limit 100;
+select * from (select ss_cdemo_sk, count(*) from store_sales group by ss_cdemo_sk) aa limit 100;
+select * from (select ss_hdemo_sk, count(*) from store_sales group by ss_hdemo_sk) aa limit 100;
+select * from (select ss_addr_sk, count(*) from store_sales group by ss_addr_sk) aa limit 100;
+select * from (select ss_store_sk, count(*) from store_sales group by ss_store_sk) aa limit 100;
+select * from (select ss_promo_sk, count(*) from store_sales group by ss_promo_sk) aa limit 100;
+select * from (select ss_ticket_number, count(*) from store_sales group by ss_ticket_number) aa limit 100;
+select * from (select ss_quantity, count(*) from store_sales group by ss_quantity) aa limit 100;
