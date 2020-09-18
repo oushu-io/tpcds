@@ -28,16 +28,13 @@ gen_query() {
 	do
 		if [[ ${i} -eq 10 ]] || [[ ${i} -eq 11 ]] ||
 		   [[ ${i} -eq 13 ]] || [[ ${i} -eq 14 ]] ||
-		   [[ ${i} -eq 23 ]] || [[ ${i} -eq 24 ]] ||
 		   [[ ${i} -eq 35 ]] || [[ ${i} -eq 44 ]] ||
 		   [[ ${i} -eq 47 ]] || [[ ${i} -eq 48 ]] ||
 		   [[ ${i} -eq 4  ]] || [[ ${i} -eq 57 ]] ||
-		   [[ ${i} -eq 61 ]] || [[ ${i} -eq 64 ]] ||
-		   [[ ${i} -eq 68 ]] || [[ ${i} -eq 6  ]] ||
+		   [[ ${i} -eq 64 ]] || [[ ${i} -eq 6  ]] ||
 		   [[ ${i} -eq 72 ]] || [[ ${i} -eq 74 ]] ||
-		   [[ ${i} -eq 76 ]] || [[ ${i} -eq 78 ]] ||
-		   [[ ${i} -eq 81 ]] || [[ ${i} -eq 83 ]] ||
-		   [[ ${i} -eq 95 ]] || [[ ${i} -eq 99 ]]; then
+		   [[ ${i} -eq 78 ]] || [[ ${i} -eq 81 ]] || 
+		   [[ ${i} -eq 95 ]]; then
 			echo "\timing on" > ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			echo "set optimizer=on;" >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
 			echo "set new_executor=auto;" >> ${CURDIR}/WORK/${DATASIZE}/query_${i}.sql
